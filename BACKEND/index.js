@@ -273,8 +273,13 @@ app.post("/sellOrder", async (req, res) => {
 });
 app.use("/", authRoute);
 
-app.listen(3002,()=>{
-    console.log("App started");
-    mongoose.connect(uri);
-    console.log("DB connected");
+app.listen(PORT, async () => {
+    console.log(`App started on port ${PORT}`);
+
+    try {
+        await mongoose.connect(uri);
+        console.log("DB connected");
+    } catch (err) {
+        console.log(err);
+    }
 });
