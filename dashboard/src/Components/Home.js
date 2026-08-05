@@ -33,7 +33,7 @@ const Home = () => {
 
         // Verify token with backend
         const { data } = await axios.post(
-          "https://zerodha-clone-8882.onrender.com.com/",
+          "https://zerodha-clone-8882.onrender.com/",
           {},
           {
             withCredentials: true,
