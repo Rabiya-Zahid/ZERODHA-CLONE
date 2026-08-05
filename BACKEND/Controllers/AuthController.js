@@ -17,9 +17,9 @@ module.exports.Signup = async (req, res, next) => {
   sameSite: "none",
 });
     res
-      .status(201)
+      .status(200)
       .json({ message: "User signed in successfully", success: true, user });
-    next();
+    
   } catch (error) {
     console.error(error);
   }
