@@ -26,11 +26,7 @@ const Home = () => {
     const verifyCookie = async () => {
       try {
         // If no token exists, go to login page
-        if (!cookies.token) {
-          window.location.href = "https://zerodha-clone-1-vnqf.onrender.com/login";
-          return;
-        }
-
+        
         // Verify token with backend
         const { data } = await axios.post(
           "https://zerodha-clone-8882.onrender.com/",
@@ -61,7 +57,7 @@ window.location.href = "https://zerodha-clone-1-vnqf.onrender.com/login";
     };
 
     verifyCookie();
-  }, [cookies, navigate, removeCookie]);
+  },  [removeCookie]);
 
   const Logout = () => {
    removeCookie("token");
