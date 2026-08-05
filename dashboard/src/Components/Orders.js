@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const   Orders=()=>{
     const [allOrders,setAllOrders]=useState([]);
       useEffect(()=>{
-        axios.get("http://localhost:3002/orders").then((res)=>{
+        axios.get("http://zerodha-clone-8882.onrender.com/orders").then((res)=>{
           console.log(res.data);
           setAllOrders(res.data);
         }); 

@@ -6,7 +6,7 @@ const GeneralContext = React.createContext({
   openBuyWindow: (uid) => {},
   closeBuyWindow: () => {},
 
-  penSellWindow: (uid) => {},
+  openSellWindow: (uid) => {},
   closeSellWindow: () => {},
 
   });

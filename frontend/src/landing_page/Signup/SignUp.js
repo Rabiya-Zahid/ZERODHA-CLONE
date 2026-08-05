@@ -42,7 +42,7 @@ const Signup = () => {
 
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/signup",
+        "http://zerodha-clone-8882.onrender.com/signup",
         {
           ...inputValue,
         },
@@ -57,7 +57,7 @@ const Signup = () => {
         handleSuccess(message);
 
         setTimeout(() => {
-         window.location.href = "http://localhost:3001";
+         window.location.href = "http://zerodha-clone-8882.onrender.com";
         }, 1000);
       } else {
         handleError(message);
