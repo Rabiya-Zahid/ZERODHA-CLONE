@@ -15,8 +15,8 @@ const   app=express();
 app.use(
   cors({
     origin: [
-      "http://localhost:3000",
-      "http://localhost:3001",
+      "https://zerodha-clone-1-vnqf.onrender.com",
+    "https://zerodha-clone-dashboard-f0tk.onrender.com"
     ],
     credentials: true,
   })

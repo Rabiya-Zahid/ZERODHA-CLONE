@@ -5,7 +5,7 @@ const   Positions=()=>{
 
 const [allPositions,setAllPositions]=useState([]);
   useEffect(()=>{
-    axios.get("http://zerodha-clone-8882.onrender.com/allPositions").then((res)=>{
+    axios.get("https://zerodha-clone-8882.onrender.com/allPositions").then((res)=>{
       console.log(res.data);
       setAllPositions(res.data);
     });

@@ -27,13 +27,13 @@ const Home = () => {
       try {
         // If no token exists, go to login page
         if (!cookies.token) {
-          window.location.href = "http://zerodha-clone-8882.onrender.com/login";
+          window.location.href = "https://zerodha-clone-1-vnqf.onrender.com/login";
           return;
         }
 
         // Verify token with backend
         const { data } = await axios.post(
-          "http://zerodha-clone-8882.onrender.com/",
+          "https://zerodha-clone-8882.onrender.com.com/",
           {},
           {
             withCredentials: true,
@@ -51,12 +51,12 @@ const Home = () => {
           });
         } else {
           removeCookie("token");
-window.location.href = "http://zerodha-clone-8882.onrender.com/login";
+window.location.href = "https://zerodha-clone-1-vnqf.onrender.com/login";
         }
       } catch (error) {
         console.log(error);
         removeCookie("token");
-window.location.href = "http://zerodha-clone-8882.onrender.com/login";
+window.location.href = "https://zerodha-clone-1-vnqf.onrender.com/login";
       }
     };
 
@@ -65,7 +65,7 @@ window.location.href = "http://zerodha-clone-8882.onrender.com/login";
 
   const Logout = () => {
    removeCookie("token");
-window.location.href = "http://zerodha-clone-8882.onrender.com/login";
+window.location.href = "https://zerodha-clone-1-vnqf.onrender.com/login";
   };
 
   return (
